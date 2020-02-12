@@ -1,7 +1,7 @@
 import cv2
-import sys
 
-# # Get user supplied values
+
+# Get user supplied values
 imagePath = "/Users/adi/Downloads/McMaster/Sem 6/Sr Project/facialRecognition/aiLockDoor/1.png"
 cascPath = "/Users/adi/Downloads/McMaster/Sem 6/Sr Project/facialRecognition/aiLockDoor/haarcascade_frontalface_default.xml"
 
@@ -18,7 +18,6 @@ faces = faceCascade.detectMultiScale(
     scaleFactor=1.1,
     minNeighbors=5,
     minSize=(30, 30)
-    #flags = cv2.CV_HAAR_SCALE_IMAGE
 )
 
 print("Found {0} faces!".format(len(faces)))
