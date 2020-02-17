@@ -1,0 +1,16 @@
+Facial Recognition Door lock Project
+
+In this project, I've used Haar Cascade object detection in a video stream.
+
+Haar Cascase theory:
+  Object Detection using Haar feature-based cascade classifiers is an effective
+  object detection method proposed by Paul Viola and Michael Jones in their paper,
+  "Rapid Object Detection using a Boosted Cascade of Simple Features" in 2001. It
+  is a machine learning based approach where a cascade function is trained from a
+  lot of positive and negative images. It is then used to detect objects in other images.
+  Initially, the algorithm uses a lot of positive images (images of faces) and negative
+  images (images without faces) to train the classifier.
+
+
+Firebase database is being used to save the images of faces that must be recognized.
+Along with that, an unique id is created every time a new image is uploaded to the db.
