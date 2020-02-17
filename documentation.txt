@@ -12,4 +12,5 @@ Haar Cascase theory:
   images (images without faces) to train the classifier.
 
 
-We are also using local database to save the images of faces that must be recognized.
+Firebase database is being used to save the images of faces that must be recognized.
+Along with that, an unique id is created every time a new image is uploaded to the db.
