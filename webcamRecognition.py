@@ -5,7 +5,7 @@ import random
 import string
 
 
-def main():
+def saveMain():
     try:
         # Loads the XML that contains trained data on +ve and -ve images
         cascPath = "haarcascade_frontalface_alt.xml"
@@ -23,7 +23,7 @@ def main():
             # converts the frames to grayscale from colored for resource efficiency
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-            # Detect different size objects in the input image. The detected objects are returned as a list of rectangles.
+            # Detect different size object in the input image. The detected object is returned as a list of rectangles.
             faces = faceCascade.detectMultiScale(
                 gray,  # input image
                 scaleFactor=1.1,  # specify how much the image size is reduced at each image scale
@@ -72,6 +72,3 @@ def randomStringDigits(stringLength=6):
     """Generate a random string of letters and digits """
     lettersAndDigits = string.ascii_letters + string.digits
     return ''.join(random.choice(lettersAndDigits) for i in range(stringLength))
-
-
-main()
