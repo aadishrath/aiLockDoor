@@ -2,7 +2,7 @@ Facial Recognition Door lock Project
 
 In this project, I've used Haar Cascade object detection in a video stream.
 
-Haar Cascase theory:
+Haar Cascade theory:
   Object Detection using Haar feature-based cascade classifiers is an effective
   object detection method proposed by Paul Viola and Michael Jones in their paper,
   "Rapid Object Detection using a Boosted Cascade of Simple Features" in 2001. It
@@ -11,6 +11,7 @@ Haar Cascase theory:
   Initially, the algorithm uses a lot of positive images (images of faces) and negative
   images (images without faces) to train the classifier.
 
+Due to the limitation of Raspberry Pi memory, CNN (Computational Neural Network) face detector
+can't be used. Another option is to HOG (histogram of oriented gradients) but very slow on Pi.
+Thus, HC is used to get at least 1-3 FPS.
 
-Firebase database is being used to save the images of faces that must be recognized.
-Along with that, an unique id is created every time a new image is uploaded to the db.
