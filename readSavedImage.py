@@ -31,6 +31,7 @@ def readMain():
             img = ci.main(unknownInputImg, savedImg)
             img = img[0][0]
             print(img)
+
             if img:
                 print("face found")
                 return 1
@@ -52,3 +53,6 @@ def readMain():
         except FileNotFoundError:
             return 0
             exit(0)
+
+
+readMain()

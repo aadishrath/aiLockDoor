@@ -56,8 +56,9 @@ def main():
                     lastimg = cv2.resize(faceimg, (64, 64))
                     cv2.imwrite("faceImg.png", lastimg)
 
-                userId = randomStringDigits(8)
-                tempFile = userId + ".png"
+                # userId = randomStringDigits(8)
+                fName = input("Enter your first name: ")
+                tempFile = fName + ".png"
                 faceImg = cv2.imread(r'./faceImg.png')
 
                 # separate the R, G, and B channels
@@ -88,8 +89,8 @@ def main():
     return gray_image, tempFile
 
 
-# Creates a random alphanumeric string for unique user id
-def randomStringDigits(stringLength=6):
-    """Generate a random string of letters and digits """
-    lettersAndDigits = string.ascii_letters + string.digits
-    return ''.join(random.choice(lettersAndDigits) for i in range(stringLength))
+# # Creates a random alphanumeric string for unique user id
+# def randomStringDigits(stringLength=6):
+#     """Generate a random string of letters and digits """
+#     lettersAndDigits = string.ascii_letters + string.digits
+#     return ''.join(random.choice(lettersAndDigits) for i in range(stringLength))

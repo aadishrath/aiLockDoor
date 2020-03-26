@@ -22,14 +22,16 @@ def main():
         # removes any noise from image taken
         clean_img = cv2.blur(img, (1, 1))
 
-        # checks if the filename exists, creates new name if it does then save file; else saves the files
-        if os.path.exists(tempFile):
-            userId = randomStringDigits(8)
-            tempFile = userId + ".png"
-            cv2.imwrite(path + '/' + tempFile, clean_img)  # saves the gray image locally with newly generated name
+        # checks if the filename exists, notifies name exists and exits the program; else saves the files
+        if os.path.exists(path+'/'+tempFile):
+            # print("Name already exists")
+            return 0
         else:
             cv2.imwrite(path + '/' + tempFile, clean_img)  # saves the gray image locally with received name
+            # print("Created successfully")
         return 1
     except Exception:
         return 0
 
+
+main()
