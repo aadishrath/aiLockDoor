@@ -7,16 +7,18 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('home.html')
+  
 
-@app.route("/User")
+@app.route("/adduser")
 def addUser():
-    return render_template('addUser.html')
+    return render_template('AddUser.html')
+
 
 @app.route('/logs')
 def logs():
-   with open("Logs.txt", "r") as f:
-       content = f,read()
-       return render_template('home.html', content=content)
+    with open("Logs.txt", "r") as f:
+        content = f, read()
+        return render_template('home.html', content=content)
 
 
 if __name__ == '__main__':
