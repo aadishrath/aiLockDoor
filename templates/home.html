@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
+<!--    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">-->
     {%  if title %}
     <title>Recognition Lock - {{ title }}</title>
     {%  else %}
@@ -12,24 +12,14 @@
     {%  endif %}
 </head>
 <body>
-    <header class="site-header">
+    <H1>Homepage</H1>
+    <header class="site-header"></header>
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
-                <a class="navbar-brand mr-4" href="/">Ai Recognition Lock</a>
                 <a class="nav-item nav-link" href="/">Logs </a>
-                <a class="nav-item nav-link" href="/User">Users</a>
+                <a class="nav-item nav-link" href="/adduser">Users</a>
             </div>
-          </div>
-        </div>
       </nav>
-
-          <div>
-        <H1> Logs:</H1>
-        <div style="height:600px;width:600px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
-         <p><iframe src="Logs.txt" frameborder="0" height="400"
-      width="95%"></iframe></p>
-    </div>
-
 </body>
 </html>

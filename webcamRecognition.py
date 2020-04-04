@@ -57,7 +57,7 @@ def main(result):
                     cv2.imwrite("faceImg.png", lastimg)
 
                 # userId = randomStringDigits(8)
-               # fName = input("Enter your first name: ")
+                # fName = input("Enter your first name: ")
                 fName = result
                 tempFile = fName + ".png"
                 faceImg = cv2.imread(r'./faceImg.png')
