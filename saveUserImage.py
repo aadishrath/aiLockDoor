@@ -1,7 +1,7 @@
 import os
 import cv2
 import webcamRecognition as wr
-import compareImage as ci
+#import compareImage as ci
 
 
 # check to see if directory exists
@@ -11,13 +11,13 @@ def checkDir():
     return './savedImages'
 
 
-def main():
+def main(result):
     try:
         # create directory if it doesn't exist
         path = checkDir()
 
         # receives the image and image filename
-        img, tempFile = wr.main()
+        img, tempFile = wr.main(result)
 
         # removes any noise from image taken
         clean_img = cv2.blur(img, (1, 1))
@@ -32,6 +32,3 @@ def main():
         return 1
     except Exception:
         return 0
-
-
-main()
