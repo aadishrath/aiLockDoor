@@ -1,15 +1,16 @@
 import os
+import datetime
 
-
-def main():
+def main(result):
     # reads all saved images
-    path = './savedImages'
+    path = './savedimages'
 
     # move to savedImages directory
     os.chdir(path)
 
     # user enters the name to delete from the authorized user list
-    name = input("Enter name to be removed: ")
+    # name = input("Enter name to be removed: ")
+    name = result
 
     fileName = name + '.png'
 
@@ -21,5 +22,7 @@ def main():
         # print("Can not delete the file as it doesn't exists")
         return 0
 
+    print("Updated Logs")
 
-main()
+    path = '..'
+    os.chdir(path)

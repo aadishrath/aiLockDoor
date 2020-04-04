@@ -5,7 +5,7 @@ import string
 import sys
 
 
-def main():
+def main(result):
     try:
         # Loads the XML that contains trained data on +ve and -ve images
         cascPath = "haarcascade_frontalface_alt.xml"
@@ -57,7 +57,8 @@ def main():
                     cv2.imwrite("faceImg.png", lastimg)
 
                 # userId = randomStringDigits(8)
-                fName = input("Enter your first name: ")
+                # fName = input("Enter your first name: ")
+                fName = result
                 tempFile = fName + ".png"
                 faceImg = cv2.imread(r'./faceImg.png')
 
