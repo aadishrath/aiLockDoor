@@ -31,18 +31,28 @@ def readMain():
             img = ci.main(unknownInputImg, savedImg)
             img = img[0][0]
             print(img)
+
             if img:
                 print("face found")
+                return 1
                 break
             else:
                 print("face not found")
+                return 0
                 break
-
-        os.chdir('..')
-        os.remove("./" + tempFile)
     except FileNotFoundError:
         print("No authorized user exists")
         for deleteFile in os.listdir("."):
             if deleteFile.endswith(".png"):
                 os.remove(deleteFile)
         exit(0)
+    finally:
+        try:
+            os.chdir('..')
+            os.remove("./" + tempFile)
+        except FileNotFoundError:
+            return 0
+            exit(0)
+
+
+readMain()
