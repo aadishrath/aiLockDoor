@@ -5,11 +5,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
-    {%  if title %}
-    <title>Recognition Lock - {{ title }}</title>
-    {%  else %}
-    <title> Ai Faical Recognition Lock</title>
-    {%  endif %}
 </head>
 <body>
     <header class="site-header">
@@ -22,8 +17,6 @@
                 <a class="nav-item nav-link" href="/Remove">Remove</a>
                 <a class="nav-item nav-link" href="/Users">Users</a>
             </div>
-          </div>
-        </div>
       </nav>
             <H1> Users:</H1>
                     <div style="height:600px;width:600px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
