@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+                <a class="navbar-brand mr-4" href="/">Ai Recognition Lock</a>
+                <a class="nav-item nav-link" href="/">Logs </a>
+                <a class="nav-item nav-link" href="/Add">Add</a>
+                <a class="nav-item nav-link" href="/Remove">Remove</a>
+                <a class="nav-item nav-link" href="/Users">Users</a>
+            </div>
+      </nav>
+            <H1> Remove User:</H1>
+            <form action="" method ="POST">
+              <div class = "form-group">
+                  <label for="name">Enter Name:</label>
+                  <input type="name" class="form-control" id="nameRemove" placeholder="Enter Name" name="nameRemove">
+             </div>
+
+          <div>
+              <button type ="submit" class ="btn btn-primary">Remove</button>
+            </form>
+
+        <div class="alert alert-primary" role="alert">
+            {{ message }}
+    </div>
+
+
+</body>
+</html>

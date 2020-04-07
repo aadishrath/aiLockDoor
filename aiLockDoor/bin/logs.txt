@@ -1,0 +1,5 @@
+[2020-04-07 11:26:12] User: AR Has been Created 
+[2020-04-07 11:37:03] User: AR Has been Removed 
+[2020-04-07 11:37:31] User: AR Has been Removed 
+[2020-04-07 11:37:57] User: AR Has been Removed 
+[2020-04-07 11:38:00] User: AR Has been Removed 
