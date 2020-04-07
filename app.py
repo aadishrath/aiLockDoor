@@ -11,13 +11,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    with open(r"C:\Users\Derek\PycharmProjects\webapp\Logs.txt", 'r') as f:
+    with open(r"Logs.txt", 'r') as f:
         content = f.read()
     return render_template('home.html', content=content)
 
 @app.route("/Users")
 def addUser():
-    with open(r"C:\Users\Derek\PycharmProjects\webapp\Users.txt", 'r') as f:
+    with open(r"Users.txt", 'r') as f:
         content = f.read()
     return render_template('users.html', content=content)
 
@@ -26,17 +26,17 @@ def addUser():
 def removeUser():
     if request.method == 'POST':
         result = request.form['nameRemove']
-
         removeSavedImage.main(result)
-        f = open(r"C:\Users\Derek\PycharmProjects\webapp\Logs.txt", 'a')
-        f.write("[%s] User: %s Has been Removed \n" % (datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), result))
+        print("User Removed: ", result)
+        f = open(r"/home/pi/Desktop/test/aiLockDoor/Logs.txt",'a')
+        f.write("[%s] User: %s Has been Removed \n" %(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), result))
         f.close()
         print("Updated Log")
         path = '..'
         os.chdir(path)
-        with open(r"C:\Users\Derek\PycharmProjects\webapp\Users.txt",'r') as f:
+        with open(r"Users.txt",'r') as f:
             lines = f.readlines()
-        with open(r"C:\Users\Derek\PycharmProjects\webapp\Users.txt",'w') as f:
+        with open(r"Users.txt",'w') as f:
             for line in lines:
                 if line.strip("\n") != result:
                     f.write(line)
@@ -49,12 +49,12 @@ def add():
         result = request.form['name']
         print("User Added: ", result)
         saveUserImage.main(result)
-        f = open(r"C:\Users\Derek\PycharmProjects\webapp\Logs.txt",'a')
+        f = open(r"/home/pi/Desktop/test/aiLockDoor/Logs.txt",'a')
         f.write("[%s] User: %s Has been Created \n" %(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), result))
         f.close()
         print("Updated Log")
 
-        f = open(r"C:\Users\Derek\PycharmProjects\webapp\Users.txt",'a')
+        f = open(r"Users.txt",'a')
         f.write("%s\n" %result)
         f.close()
         print("Updated Users")

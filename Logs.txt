@@ -1,1 +1,14 @@
-K has Authenticated
+[2020-04-07 11:28:16] User: Kevin2 Has been Created 
+[2020-04-07 11:28:44] User: Kevin3 Has been Created 
+[2020-04-07 11:42:43] User: Kevin Has been Created 
+[2020-04-07 11:44:58] User: Kevin Has been Created 
+[2020-04-07 11:46:47] User: Kevin Has been Created 
+[2020-04-07 12:29:23] User: Kevin Has been Created 
+[2020-04-07 12:34:26] User: Kevin1 Has been Created 
+[2020-04-07 12:34:33] User: Kevin1 Has been Removed 
+[2020-04-07 12:45:05] User: Kevin Has been Created 
+[2020-04-07 13:18:14] Face entry allowed 
+[2020-04-07 13:42:40] Face entry allowed 
+[2020-04-07 13:44:58] Face entry allowed 
+[2020-04-07 13:52:05] Face entry denied 
+[2020-04-07 13:55:11] Face entry allowed 

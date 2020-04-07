@@ -3,12 +3,13 @@ import os
 import numpy as np
 import webcamRecognition as wr
 import compareImage as ci
+import datetime
 
 
 def readMain():
     try:
         # calls webcam recognition function to get input
-        tempImg, tempFile = wr.main()
+        tempImg, tempFile = wr.main("temp")
 
         # removes any noise from image taken
         tempImg = cv2.blur(tempImg, (1, 1))
@@ -29,14 +30,23 @@ def readMain():
         for file in os.listdir('.'):
             savedImg = cv2.imread(file)
             img = ci.main(unknownInputImg, savedImg)
-            img = img[0][0]
-            print(img)
+            try:
+                img = img[0][0]
+                print(img)
+            except IndexError:
+                img = False
 
             if img:
+                f = open(r"/home/pi/Desktop/test/aiLockDoor/Logs.txt",'a')
+                f.write("[%s] Face entry allowed \n" %(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+                f.close()
                 print("face found")
                 return 1
                 break
             else:
+                f = open(r"/home/pi/Desktop/test/aiLockDoor/Logs.txt",'a')
+                f.write("[%s] Face entry denied \n" %(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+                f.close()
                 print("face not found")
                 return 0
                 break
@@ -53,6 +63,3 @@ def readMain():
         except FileNotFoundError:
             return 0
             exit(0)
-
-
-readMain()

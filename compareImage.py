@@ -22,7 +22,3 @@ def main(unknownInputImg, savedImg, tolerance=0.6):
         result.append(list(distances <= tolerance))
 
     return result
-
-
-
-
