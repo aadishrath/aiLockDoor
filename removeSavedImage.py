@@ -4,7 +4,7 @@ import datetime
 def main(result):
     # reads all saved images
 
-    path = './savedimages'
+    path = 'savedImages'
 
     # move to savedImages directory
     os.chdir(path)

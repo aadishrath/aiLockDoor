@@ -15,14 +15,9 @@ def main(unknownInputImg, savedImg, tolerance=0.6):
 
     result = []
 
-
     # loops over the list of encodings of each input image with 40% match (tolerance of 0.6)
     for unknownEncoding in unknownInputImgEncoding:
         distances = face_recognition.face_distance(savedImgEncoding, unknownEncoding)
         result.append(list(distances <= tolerance))
 
     return result
-
-
-
-

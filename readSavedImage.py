@@ -3,13 +3,14 @@ import os
 import numpy as np
 import webcamRecognition as wr
 import compareImage as ci
+import datetime
 
 
 def readMain():
     try:
         # calls webcam recognition function to get input
-        tempImg, tempFile = wr.main()
-
+        tempImg, tempFile = wr.main("temp")
+        
         # removes any noise from image taken
         tempImg = cv2.blur(tempImg, (1, 1))
 
@@ -24,20 +25,29 @@ def readMain():
 
         # move to savedImages directory
         os.chdir(path)
-
+        
         # loops over the saved images 1 by 1 and compares images to unlock/keep locked
         for file in os.listdir('.'):
             savedImg = cv2.imread(file)
             img = ci.main(unknownInputImg, savedImg)
-            img = img[0][0]
-            print(img)
+            try:
+                img = img[0][0]
+                print(img)
+            except IndexError:
+                img = False
 
             if img:
-                print("face found")
+                f = open(r"/home/pi/Desktop/test/aiLockDoor/Logs.txt",'a')
+                f.write("[%s] Face entry allowed \n" %(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+                f.close()
+                print("Valid User")
                 return 1
                 break
             else:
-                print("face not found")
+                f = open(r"/home/pi/Desktop/test/aiLockDoor/Logs.txt",'a')
+                f.write("[%s] Face entry denied \n" %(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+                f.close()
+                print("Not Valid User")
                 return 0
                 break
     except FileNotFoundError:
@@ -53,6 +63,3 @@ def readMain():
         except FileNotFoundError:
             return 0
             exit(0)
-
-
-readMain()
