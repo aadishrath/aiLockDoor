@@ -10,7 +10,7 @@ def readMain():
     try:
         # calls webcam recognition function to get input
         tempImg, tempFile = wr.main("temp")
-
+        
         # removes any noise from image taken
         tempImg = cv2.blur(tempImg, (1, 1))
 
@@ -25,7 +25,7 @@ def readMain():
 
         # move to savedImages directory
         os.chdir(path)
-
+        
         # loops over the saved images 1 by 1 and compares images to unlock/keep locked
         for file in os.listdir('.'):
             savedImg = cv2.imread(file)
@@ -40,14 +40,14 @@ def readMain():
                 f = open(r"/home/pi/Desktop/test/aiLockDoor/Logs.txt",'a')
                 f.write("[%s] Face entry allowed \n" %(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
                 f.close()
-                print("face found")
+                print("Valid User")
                 return 1
                 break
             else:
                 f = open(r"/home/pi/Desktop/test/aiLockDoor/Logs.txt",'a')
                 f.write("[%s] Face entry denied \n" %(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
                 f.close()
-                print("face not found")
+                print("Not Valid User")
                 return 0
                 break
     except FileNotFoundError:

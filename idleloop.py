@@ -1,10 +1,7 @@
 import time
-import RPi.GPIO as GPIO
 from keypad import keypad
 import runstepper
 import readSavedImage
-GPIO.setwarnings(False)
-GPIO.setup(26, GPIO.OUT, initial=GPIO.LOW)
 
 print("ready")
  
@@ -29,9 +26,6 @@ while True:
         runstepper.turnmotor(1)
         print("locked")
     else:
-        GPIO.output(26, GPIO.HIGH)
-        time.sleep(1)                  
-        GPIO.output(26, GPIO.LOW)  
         seq = []
         for i in range(4):
             digit = None
@@ -49,14 +43,7 @@ while True:
             runstepper.turnmotor(1)
             print("locked")
         else:
-            GPIO.output(26, GPIO.HIGH)
-            time.sleep(1)                  
-            GPIO.output(26, GPIO.LOW)
-            time.sleep(1)
-            GPIO.output(26, GPIO.HIGH)
-            time.sleep(1)                  
-            GPIO.output(26, GPIO.LOW)
-    
+            print("wrong code :(")
     
 
     

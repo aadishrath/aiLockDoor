@@ -12,3 +12,36 @@
 [2020-04-07 13:44:58] Face entry allowed 
 [2020-04-07 13:52:05] Face entry denied 
 [2020-04-07 13:55:11] Face entry allowed 
+[2020-04-07 14:09:30] User: Kevin Has been Created 
+[2020-04-07 14:11:16] Face entry denied 
+[2020-04-07 14:19:34] Face entry allowed 
+[2020-04-07 14:20:24] Face entry denied 
+[2020-04-07 14:27:07] User: Kevin1 Has been Created 
+[2020-04-07 14:29:08] User: Kevin Has been Removed 
+[2020-04-07 14:29:32] User: Kevin1 Has been Removed 
+[2020-04-07 14:30:58] User: Kevin Has been Created 
+[2020-04-07 14:31:06] User: Kevin Has been Removed 
+[2020-04-07 14:41:20] User: Kevin Has been Created 
+[2020-04-07 14:42:33] Face entry allowed 
+[2020-04-07 14:48:35] Face entry allowed 
+[2020-04-07 14:51:17] Face entry allowed 
+[2020-04-07 14:53:19] Face entry allowed 
+[2020-04-07 15:01:38] User: Kevin2 Has been Created 
+[2020-04-07 15:10:34] Face entry allowed 
+[2020-04-07 15:11:28] Face entry denied 
+[2020-04-07 15:23:27] User: Kevin Has been Removed 
+[2020-04-07 15:23:31] User: Kevin2 Has been Removed 
+[2020-04-07 15:31:30] User: Kevin Has been Created 
+[2020-04-07 15:33:46] User: Kevin Has been Removed 
+[2020-04-07 15:35:23] User: Kevin Has been Created 
+[2020-04-07 15:35:36] User: Kevin Has been Removed 
+[2020-04-07 15:45:12] Failed to add User: Kevin exists already 
+[2020-04-07 15:45:55] User: Kevin Has been Created 
+[2020-04-07 15:46:11] User: Kevin Has been Removed 
+[2020-04-07 15:48:46] User: Kevin Has been Created 
+[2020-04-07 15:49:42] User: Kevin Has been Removed 
+[2020-04-07 15:54:22] User: Kevin Has been Created 
+[2020-04-07 15:56:32] Face entry allowed 
+[2020-04-07 15:57:56] Face entry denied 
+[2020-04-07 16:31:18] User: Kevin Has been Removed 
+[2020-04-07 16:47:25] User: Kevin Has been Created 
